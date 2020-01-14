@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title th:text="${title}"></title>
+
+    <meta name="keywords" th:content="${keyword}">
+
+    <meta name="description"
+          th:content="${description}">
+
+    <meta property="og:type" content="novel"/>
+    <meta property="og:title" th:attr="content=${title}"/>
+    <meta property="og:description" th:attr="content=${book.bookDesc}"/>
+    <meta property="og:image" th:attr="content=${application.webSiteDomain}+${book.picUrl}"/>
+    <meta property="og:novel:category" th:attr="content=${book.cateName}"/>
+    <meta property="og:novel:author" th:attr="content=${book.author}"/>
+    <meta property="og:novel:book_name" th:attr="content=${book.bookName}"/>
+    <meta property="og:novel:read_url"  th:attr="content=${application.webSiteDomain}+'/book/'+${book.id}+'.html'"/>
+    <meta property="og:url" th:attr="content=${application.webSiteDomain}+'/book/'+${book.id}+'.html'"/>
+    <meta property="og:novel:status" th:attr="content=${book.bookStatus}"/>
+    <meta property="og:novel:update_time" th:attr="content=${#dates.format(book.updateTime, 'yy-MM-dd')}"/>
+    <meta property="og:novel:latest_chapter_name" th:attr="content=${lastIndexName}"/>
+    <meta property="og:novel:latest_chapter_url" th:attr="content=${application.webSiteDomain}+'/book/'+${bookId}+'/'+${lastIndexNum}+'.html'"/>
+
+
+
+
+    <div th:include="common/css :: css"></div>
+
+    <style type="text/css">
+
+        .indexP p a{
+            color:#4c6978;
+        }
+
+        .tag-list {
+            padding-top: 0px;
+            padding-bottom: 20px;
+            position: fixed;
+            top:50px;
+            right: 0px;
+            width: 120px;
+            z-index:100000;
+        }
+
+        .tag-list .tag {
+            float: right;
+            width: 100%;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .tag-list .tag a {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+        .tag-list .highlight {
+            padding: 5px 9px;
+            border: 1px solid #f90;
+            color: #f90;
+            border-radius: 50px;
+        }
+
+        .tag-list .highlight .text {
+            color: #f90;
+        }
+        .tag-list .tag .text {
+            display: inline-block;
+            vertical-align: middle;
+            color: #f90;
+        }
+
+        ul, li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .tag-list .tag a {
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .tag-list .highlight .icn {
+            color: #f90;
+        }
+        .tag-list .tag .icn {
+            margin-right: 5px;
+            color: #ccc;
+        }
+
+        .tag-list .highlight .text {
+            padding-left: 3px;
+            color: #f90;
+        }
+        .tag-list .tag .text {
+            display: inline-block;
+            vertical-align: middle;
+            color: #f90;
+        }
+
+        .line-limit-length {
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            white-space: nowrap;
+
+        }
+
+    </style>
+
+    <script src="/js/wap_collect.js"></script>
+
+</head>
+<body>
+<div id="content">
+
+<ul class="tag-list clearfix" id="tagLi">
+
+</ul>
+
+
+<input type="hidden" id="bookIdHidden" th:value="${bookId}"/>
+<input type="hidden" id="bookTagHidden" th:value="${book.softTag}"/>
+<input type="hidden" id="bookNamedHidden" th:value="${book.bookName}"/>
+<input type="hidden" id="catidHidden" th:value="${book.catid}"/>
+
+<div style="height: 50px;line-height: 50px;text-align: center" class="layui-header header header-doc  layui-bg-cyan">
+
+    <div style="float: left;margin-left: 10px">
+        <a href="javascript:history.go(-1)">
+            <i style="font-size: 20px;color: #92B8B1;" class="layui-icon">&#xe65c;</i></a>
+    </div>
+    <b class="layui-icon" th:text="${book.bookName}"></b>
+    <div style="float: right;margin-right: 10px">
+        <a href="/"><i style="font-size: 20px;color: #92B8B1;" class="layui-icon">&#xe68e;</i></a>
+    </div>
+</div>
+
+<div class="layui-row" style="background: #f2f2f2">
+    <div style="padding: 10px" class="layui-col-xs4 layui-col-sm2 layui-col-md2 layui-col-lg2">
+        <img style=" width:auto; height:auto; max-width:100%; max-height:100%;" th:src="${book.picUrl}"/>
+
+    </div>
+        <div style="position:relative;padding: 10px 20px" class="layui-col-xs8 layui-col-sm8 layui-col-md8 layui-col-lg8">
+            <a th:href="'/book/search?keyword='+ ${book.author}"><div style=";color: #4c6978;" th:text="'Author：'+ ${book.author}"></div></a>
+            <a th:href="'/book/search?catId='+${book.catid}"><div style="margin-top: 5px;color: #4c6978;" th:text="'Category：'+ ${book.cateName}"></div></a>
+            <div style="margin-top: 5px;color: #4c6978;" th:text="'Status：'+ ${book.bookStatus}"></div>
+            <div style="margin-top: 5px;color: #4c6978;">Update：<i th:text="${#dates.format(book.updateTime, 'yy-MM-dd')}"></i></div>
+            <div style="margin-top: 5px;color: #4c6978;">Score：<i style="font-weight:bold;color: red" th:text="${book.score} + '分'"></i></div>
+            <div style="margin-top: 5px;color: #4c6978;">Click：<i style="font-weight:bold;color: red" th:text="${book.visitCount}"></i></div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+<div style="text-align: center;height: 45px;line-height: 45px">
+    <a th:href="'/book/'+${book.id}+'/'+${minIndexNum}+'.html'"  type="button" class="layui-btn layui-btn-sm layui-btn-radius">Start Reading</a>
+    <button type="button" id="collectButton"  class="layui-btn layui-btn-sm layui-btn-radius layui-btn-warm">Add to BookShelf</button>
+
+    <button type="button" onclick="toMyCollect()" class="layui-btn layui-btn-sm layui-btn-radius layui-bg-cyan">My category</button>
+    <button type="button" onclick="downloadFile()" class="layui-btn layui-btn-sm layui-btn-radius layui-bg-normal">Download</button>
+</div>
+<p style="line-height: 23px;padding: 10px;font-size: 14px;color: #4c6978;" th:utext="${book.bookDesc}">
+
+</p>
+
+<div class="layui-collapse">
+    <div class="layui-colla-item" >
+        <h2 class="layui-colla-title">
+            <span>Newest</span>
+            <span style="margin-left: 30px">
+                Upadte： <i th:text="${#dates.format(book.updateTime, 'yy-MM-dd HH:mm:ss')}"></i>
+            </span>
+        </h2>
+        <div class="layui-colla-content layui-show indexP layui-row">
+
+
+            <p class="line-limit-length layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2" style="padding-left:10px;height: 50px;line-height: 50px;" th:each="index : ${indexList}"><a th:href="'/book/'+${index.bookId}+'/'+${index.indexNum}+'.html'" th:text="${index.indexName}"></a></p>
+
+        </div>
+    </div>
+</div>
+<div style="height: 42px;color:#4c6978;line-height: 42px;padding-left: 30px;background: #f2f2f2" >
+
+    <a th:href="'/book/'+${book.id}+'/index.html'">Check Content</a>
+</div>
+
+<!--
+<div style="position: fixed;top:0px;left:0px;z-index:-100;opacity: 0" th:utext="${attacDivForSearch}"></div>
+-->
+</div>
+
+<div th:replace="common/footer :: footer">
+</div>
+
+
+
+</body>
+<div th:replace="common/js :: js">
+</div>
+<script>
+    $("#content").css("min-height",($(window).height()-60)+"px");
+
+    function downloadFile() {
+        var fileUrl = '/book/download?bookId='+$("#bookIdHidden").val()+'&bookName='+$("#bookNamedHidden").val();
+        window.location.href=fileUrl;
+
+
+    }
+
+    $(window).unload(function(){
+        var token = localStorage.getItem("token");
+        if(token) {
+
+            $.get("/user/isCollect", {"bookId": $("#bookIdHidden").val(), "token": token}, function (data) {
+
+                if (data.code == 1) {
+                    $("#collectButton").text("Remove from BookShelf");
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").click(function () {
+                        cancelToCollect();
+                    });
+
+                } else if (data.code == 2) {
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").text("Add to BookShelf");
+                    $("#collectButton").click(function () {
+                        addToCollect();
+                    });
+                } else {
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").text("Add to BookShelf");
+                    $("#collectButton").click(function () {
+                        window.location.href = "/user/login.html?bookId=" + $("#bookIdHidden").val();
+                    });
+                }
+            });
+        }else{
+            $('#collectButton').unbind("click");
+            $("#collectButton").text("Add to BookShelf");
+            $("#collectButton").click(function () {
+                window.location.href = "/user/login.html?bookId="+$("#bookIdHidden").val();
+            });
+
+        }
+
+    });
+
+    $(function () {
+        var token = localStorage.getItem("token");
+        if(token) {
+
+            $.get("/user/isCollect", {"bookId": $("#bookIdHidden").val(), "token": token}, function (data) {
+
+                if (data.code == 1) {
+                    $("#collectButton").text("Add to BookShelf");
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").click(function () {
+                        cancelToCollect();
+                    });
+
+                } else if (data.code == 2) {
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").text("Add to BookShelf");
+                    $("#collectButton").click(function () {
+                        addToCollect();
+                    });
+                } else {
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").text("Add to BookShelf");
+                    $("#collectButton").click(function () {
+                        window.location.href = "/user/login.html?bookId=" + $("#bookIdHidden").val();
+                    });
+                }
+            });
+        }else{
+            $('#collectButton').unbind("click");
+            $("#collectButton").text("Add to BookShelf");
+            $("#collectButton").click(function () {
+                window.location.href = "/user/login.html?bookId="+$("#bookIdHidden").val();
+            });
+
+        }
+
+
+        var bookTag = $("#bookTagHidden").val();
+        if(bookTag){
+            bookTag=bookTag.split(",");
+            var innerHtml = "";
+            for(var i=0; i< bookTag.length;i++){
+                var tag = bookTag[i];
+                if($("#catidHidden").val() == 8) {
+                    innerHtml += ("<li class=\"tag\">\n" +
+                        "        <a href=\"/book/searchSoftBook.html?softTag=" + encodeURI(tag) + "\" class=\"highlight\"><span class=\"layui-icon\">&#xe66e;</span><span class=\"text\">" + tag + "</span></a>\n" +
+                        "    </li>");
+                }else{
+                    innerHtml += ("<li class=\"tag\">\n" +
+                        "        <a href=\"/book/searchSoftBook.html?catId=9&softTag=" + encodeURI(tag) + "\" class=\"highlight\"><span class=\"layui-icon\">&#xe66e;</span><span class=\"text\">" + tag + "</span></a>\n" +
+                        "    </li>");
+                }
+            }
+
+            $("#tagLi").html(innerHtml);
+        }
+    });
+
+
+
+    $.get("/book/addVisit",{"bookId":$("#bookIdHidden").val()},function(){});
+
+    function toMyCollect(){
+        var token = localStorage.getItem("token");
+        if(token) {
+            window.location.href = "/book/search?token=" + token;
+        }else{
+            window.location.href = "/user/login.html";
+        }
+    }
+
+    function addToCollect(){
+        var token = localStorage.getItem("token");
+
+        if(token) {
+            $.get("/user/addToCollect",{"bookId":$("#bookIdHidden").val(),"token":token},function(data){
+                    layer.alert(data.desc);
+                    if(data.code == 1) {
+                        $('#collectButton').unbind("click");
+                        $("#collectButton").text("Remove from BookShelf");
+                        $("#collectButton").click(function () {
+                            cancelToCollect();
+                        });
+                    }
+            });
+        }else{
+            window.location.href = "/user/login.html?bookId="+$("#bookIdHidden").val();
+        }
+
+
+
+    }
+
+
+    function cancelToCollect(){
+        var token = localStorage.getItem("token");
+
+        if(token) {
+            $.get("/user/cancelToCollect",{"bookId":$("#bookIdHidden").val(),"token":token},function(data){
+                    layer.alert(data.desc);
+                if(data.code == 1) {
+                    $('#collectButton').unbind("click");
+                    $("#collectButton").text("Add to BookShelf");
+                    $("#collectButton").click(function () {
+                        addToCollect();
+                    });
+                }
+
+            });
+        }else{
+            window.location.href = "/user/login.html?bookId="+$("#bookIdHidden").val();
+        }
+
+    }
+</script>
+
+
+</html>

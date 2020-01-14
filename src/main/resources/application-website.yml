@@ -1,0 +1,34 @@
+#网站配置
+website:
+  #网站名
+  name: NovelDao
+  #域名
+  domain: noveldao.com
+  #页面配置
+  page:
+    #首页配置
+    index:
+      title: ${website.name}
+      keyword: ${website.name}, Chinese Novel,Chinese Book,Chinese novel,Chinese book,AI,NLP,Natural Language Processing
+      description: ${website.name} is a Chinese Novel Website,${website.name} provides many kinds of Chinese Novel and update at the first time with help of NLP,AI.
+    #小说列表页配置
+    book-search:
+      title: ${website.name}_Updating
+      keyword: ${website.name}, Chinese Novel,Chinese Book,Chinese novel,Chinese book,AI,NLP,Natural Language Processing
+      description: ${website.name} is a Chinese Novel Website,${website.name} provides many kinds of Chinese Novel and update at the first time with help of NLP,AI
+
+    #目录页配置
+    catalog:
+      title: <bookName> The Newest Chapters List
+      keyword: <bookName>,<bookName> The Newest Chapters
+      description: <bookName> The Newest Chapters,<bookName> The Newest Chapters and Free to Read
+    #书籍详情页配置
+    detail:
+      title: <bookName> The Newest Chapters and Free to Read
+      keyword: <bookName> Free to Read,<bookName> Newest Chapters,<bookName> Free to Read,<bookName> TXT Download
+      description: <bookName> Newest Chapters List,<bookName> The Newest Chapters and Free to Read,<bookName> Download Freely。
+    #书籍内容页配置
+    content:
+      title: <bookName> <indexName>
+      keyword: <bookName>,<indexName>
+      description: <bookName><indexName>The Newest Chapters and Free to Read

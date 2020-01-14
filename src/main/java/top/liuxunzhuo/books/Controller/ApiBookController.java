@@ -22,7 +22,7 @@ import java.util.*;
 
 /**
  * api接口
- * @author XXY
+ * @author 刘训灼
  */
 @RestController
 @RequestMapping("api/book")

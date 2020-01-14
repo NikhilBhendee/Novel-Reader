@@ -35,10 +35,10 @@ import java.util.*;
 /**
  * 小说Controller
  *
- * @author 11797
+ * @author 刘训灼
  */
 @Controller
-@RequestMapping("book")
+@RequestMapping("/book")
 @RequiredArgsConstructor
 public class BookController {
 
@@ -54,7 +54,7 @@ public class BookController {
     /**
      * 精品小说搜索页
      */
-    @RequestMapping("search")
+    @RequestMapping("/search")
     public String search(@RequestParam(value = "curr", defaultValue = "1") int page, @RequestParam(value = "limit", defaultValue = "20") int pageSize,
                          @RequestParam(value = "keyword", required = false) String keyword, @RequestParam(value = "catId", required = false) Integer catId,
                          @RequestParam(value = "historyBookIds", required = false) String ids,
@@ -131,7 +131,7 @@ public class BookController {
     /**
      * 书籍详情页
      */
-    @RequestMapping("{bookId}.html")
+    @RequestMapping("/{bookId}.html")
     public String detail(@PathVariable("bookId") Long bookId, @RequestParam(value = "token", required = false) String token, HttpServletRequest req, ModelMap modelMap) {
         String userId = commonCacheUtil.get(token);
         if (org.apache.commons.lang3.StringUtils.isNotBlank(userId)) {
@@ -179,7 +179,7 @@ public class BookController {
     /**
      * 书籍目录页
      */
-    @RequestMapping("{bookId}/index.html")
+    @RequestMapping("/{bookId}/index.html")
     public String bookIndex(@PathVariable("bookId") Long bookId,HttpServletRequest req, ModelMap modelMap) {
         List<BookIndex> indexList = bookService.queryAllIndexList(bookId);
         String bookName = bookService.queryBaseInfo(bookId).getBookName();
@@ -198,7 +198,7 @@ public class BookController {
     /**
      * 书籍内容页
      */
-    @RequestMapping("{bookId}/{indexNum}.html")
+    @RequestMapping("/{bookId}/{indexNum}.html")
     public String bookContent(@PathVariable("bookId") Long bookId, @PathVariable("indexNum") Integer indexNum,HttpServletRequest req, ModelMap modelMap) {
         BookContent bookContent = bookService.queryBookContent(bookId, indexNum);
         String indexName;
@@ -238,7 +238,7 @@ public class BookController {
     /**
      * 增加访问次数
      */
-    @RequestMapping("addVisit")
+    @RequestMapping("/addVisit")
     @ResponseBody
     public String addVisit(@RequestParam("bookId") Long bookId, @RequestParam(value = "indexNum", defaultValue = "0") Integer indexNum, @RequestParam(value = "token", defaultValue = "") String token) {
         String userId = commonCacheUtil.get(token);
@@ -251,7 +251,7 @@ public class BookController {
     /**
      * 发送弹幕
      */
-    @RequestMapping("sendBullet")
+    @RequestMapping("/sendBullet")
     @ResponseBody
     public Map<String, Object> sendBullet(@RequestParam("contentId") Long contentId, @RequestParam("bullet") String bullet) {
         Map<String, Object> result = new HashMap<>(2);
@@ -264,7 +264,7 @@ public class BookController {
     /**
      * 查询是否正在下载
      */
-    @RequestMapping("queryIsDownloading")
+    @RequestMapping("/queryIsDownloading")
     @ResponseBody
     public Map<String, Object> queryIsDownloading(HttpSession session) {
         Map<String, Object> result = new HashMap<>(1);
@@ -280,7 +280,7 @@ public class BookController {
     /**
      * 查询弹幕
      */
-    @RequestMapping("queryBullet")
+    @RequestMapping("/queryBullet")
     @ResponseBody
     public List<ScreenBullet> queryBullet(@RequestParam("contentId") Long contentId) {
 

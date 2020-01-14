@@ -1,0 +1,71 @@
+#是否抓取新书，true：抓
+crawl:
+  book:
+    new:
+      enabled: false
+      #抓取频率
+      period: 2000
+
+#爬取的网站名称类型 1：笔趣岛 ，2：笔趣塔, 3:顶点，默认顶点  更多网站解析中，敬请期待
+biquta:
+  crawlsource:
+    index-url: https://m.biquta.la
+    list-page-url: https://m.biquta.la/class/{0}/{1}.html
+    book-url-pattern: href="/(\d+_\d+)/"
+    score-pattern: <div\s+class="score">(\d+\.\d+)分</div>
+    book-name-pattern: <p class="title">([^/]+)</p>
+    author-pattern: 作者：([^/]+)<
+    status-pattern: 状态：([^/]+)</li>
+    cat-pattern: 类别：([^/]+)</li>
+    update-time-pattern: 更新：(\d+-\d+-\d+\s\d+:\d+:\d+)</a>
+    pic-pattern: <img src="([^>]+)"\s+onerror="this.src=
+    intro-pattern: class="review">([^<]+)</p>
+    catalog-url-pattern: <a\s+href="(/du/\d+_\d+/)">查看完整目录</a>
+    catalog-pattern: <a\s+style=""\s+href="(/\d+_\d+/\d+\.html)">([^/]+)</a>
+biqudao:
+  crawlsource:
+    index-url: https://m.biqudao.net
+    list-page-url: https://m.biqudao.net/bqgeclass/{0}/{1}.html
+    book-url-pattern: href="/(bqge\d+)/"
+    score-pattern: <div\s+class="score">(\d+\.\d+)分</div>
+    book-name-pattern: <p class="title">([^/]+)</p>
+    author-pattern: <li class="author">作者：([^/]+)</li>
+    status-pattern: 状态：([^/]+)</li>
+    cat-pattern: 类别：([^/]+)</li>
+    update-time-pattern: 更新：(\d+-\d+-\d+\s\d+:\d+:\d+)</a>
+    pic-pattern: <img src="([^>]+)"\s+onerror="this.src=
+    intro-pattern: class="review">([^<]+)</p>
+    catalog-url-pattern: <a\s+href="(/bqge\d+/all\.html)">查看完整目录</a>
+    catalog-pattern: <a[^/]+style[^/]+href="(/bqge\d+/\d+\.html)">([^/]+)</a>
+
+dingdian:
+  crawlsource:
+    index-url: http://m.xdingdiann.com
+    list-page-url: http://m.xdingdiann.com/sort/{0}/{1}.html
+    book-url-pattern: href="/(ddk\d+)/"
+    score-pattern: <div\s+class="score">(\d+\.\d+)分</div>
+    book-name-pattern: <p class="title">([^/]+)</p>
+    author-pattern: 作者：([^/]+)<
+    status-pattern: 状态：([^/]+)</li>
+    cat-pattern: 类别：([^/]+)</li>
+    update-time-pattern: 更新：(\d+-\d+-\d+\s\d+:\d+:\d+)</a>
+    pic-pattern: <img src="([^>]+)"\s+onerror="this.src=
+    intro-pattern: class="review">([^/]+)</p>
+    catalog-url-pattern: <a\s+href="(/ddk\d+/all.html)">查看完整目录</a>
+    catalog-pattern: <a\s+style=""\s+href="(/ddk\d+/\d+\.html)">([^/]+)</a>
+
+biquge:
+  crawlsource:
+    index-url: http://m.biquge.info
+    list-page-url: http://m.biquge.info/paihangbang_lastupdate/{0}.html
+    book-url-pattern: href="/(\d+_\d+)/"
+    score-pattern: <i>(\d+)</i>
+    book-name-pattern: <a\s+href="/(\d+_\d+)/">([^<]+)</a>
+    author-pattern: 作者：([^<]+)<
+    status-pattern: <p>状态：([^<]+)</p>
+    cat-pattern: <a\s+href="/list/\d+_\d+\.html">([^<]+)</a>
+    update-time-pattern: <p>更新：(\d+-\d+-\d+T\d+:\d+:\d+)</p>
+    pic-pattern: <div\s+class="block_img2">\s*<img\s+src="([^"]+)"
+    intro-pattern: class="review">([^/]+)</p>
+    catalog-url-pattern: <a\s+href="(/ddk\d+/all.html)">查看完整目录</a>
+    catalog-pattern: <dd>\s*<a\s+href="(\d+\.html)"\s+title="([^"]+)">([^<]+)</a>\s*</dd>

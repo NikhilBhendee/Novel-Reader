@@ -70,18 +70,18 @@ public class ApiBookController {
 
         Map<String,Object> modelMap = new HashMap<>();
         String userId = null;
-        String titleType = "最近更新";
+        String titleType = "Update";
         if (catId != null) {
             titleType = CatUtil.getCatNameById(catId);
         } else if (keyword != null) {
-            titleType = "搜索";
+            titleType = "Search";
         } else if ("score".equals(sortBy)) {
-            titleType = "小说排行榜";
+            titleType = "Rank";
         } else if (ids != null) {
-            titleType = "阅读记录";
+            titleType = "Reading History";
         } else if (token != null) {
             userId = commonCacheUtil.get(token);
-            titleType = "我的书架";
+            titleType = "My BookShelf";
         }
         modelMap.put("titleType", titleType);
         List<Book> books = bookService.search(page, pageSize, userId, ids, keyword,bookStatus, catId, null, null, sortBy, sort);

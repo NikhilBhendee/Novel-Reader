@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * 首页controller
- * @author XXY
+ * @author 刘训灼
  */
 @Controller
 @RequestMapping

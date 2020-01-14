@@ -15,10 +15,10 @@ import top.liuxunzhuo.common.utils.UUIDUtils;
 import java.util.*;
 
 /**
- * @author XXY
+ * @author 刘训灼
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -31,7 +31,7 @@ public class UserController {
     /**
      * 登陆页面
      * */
-    @RequestMapping("login.html")
+    @RequestMapping("/login.html")
     public String login(Long bookId, ModelMap modelMap) {
         modelMap.put("bookId", bookId);
         return "user/login";
@@ -41,7 +41,7 @@ public class UserController {
     /**
      * 登陆或注册
      * */
-    @RequestMapping("loginOrRegist")
+    @RequestMapping("/loginOrRegist")
     @ResponseBody
     public Map<String, Object> loginOrRegist(User user, Long bookId) {
         Map<String, Object> result = new HashMap<>(2);
@@ -84,7 +84,7 @@ public class UserController {
     /**
      * 登陆状态查询
      * */
-    @RequestMapping("isLogin")
+    @RequestMapping("/isLogin")
     @ResponseBody
     public Map<String, Object> isLogin(String token) {
         Map<String, Object> result = new HashMap<>(2);
@@ -103,7 +103,7 @@ public class UserController {
     /**
      * 加入书架
      * */
-    @RequestMapping("addToCollect")
+    @RequestMapping("/addToCollect")
     @ResponseBody
     public Map<String, Object> addToCollect(Long bookId,String token) {
         Map<String, Object> result = new HashMap<>();
@@ -122,7 +122,7 @@ public class UserController {
     /**
      * 撤下书架
      * */
-    @RequestMapping("cancelToCollect")
+    @RequestMapping("/cancelToCollect")
     @ResponseBody
     public Map<String, Object> cancelToCollect(Long bookId,String token) {
         Map<String, Object> result = new HashMap<>(2);
@@ -141,7 +141,7 @@ public class UserController {
     /**
      * 判断是否加入书架
      * */
-    @RequestMapping("isCollect")
+    @RequestMapping("/isCollect")
     @ResponseBody
     public Map<String, Object> isCollect(Long bookId,String token) {
         Map<String, Object> result = new HashMap<>(2);

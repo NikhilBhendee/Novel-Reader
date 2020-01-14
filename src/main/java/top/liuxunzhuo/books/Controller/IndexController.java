@@ -42,7 +42,7 @@ public class IndexController {
 
 
 
-    @RequestMapping(value = {"/"})
+    @RequestMapping(value = {"/main"})
     public String index(@RequestParam(value = "noLazy", defaultValue = "0") String noLazy,HttpServletRequest req,ModelMap modelMap){
         List<Book> recBooks = (List<Book>) commonCacheUtil.getObject(CacheKeyConstans.REC_BOOK_LIST_KEY);
         if (!indexRecBooksConfig.isRead() || recBooks == null) {
@@ -74,6 +74,11 @@ public class IndexController {
         if(!"1".equals(application.getAttribute("noLazy"))) {
             application.setAttribute("noLazy", noLazy);
         }
-        return "books/index_"+indexTemplate;
+        return "books/index_v1";
+    }
+
+    @RequestMapping("/")
+    public  String index(){
+        return "books/index_v2";
     }
 }

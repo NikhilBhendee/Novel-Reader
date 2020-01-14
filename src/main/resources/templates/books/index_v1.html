@@ -196,7 +196,7 @@
 
     <div class="layui-colla-item">
         <h2 class="layui-colla-title"><i class="layui-icon" style="color: #59B573">&#xe62e;</i>Recommend!</h2>
-        <div class="layui-colla-content ">
+        <div class="layui-colla-content layui-show">
 
             <div class="layui-container" style="padding: 0px">
 
@@ -217,37 +217,36 @@
         </div>
     </div>
 
-    <div class="layui-colla-item" style="padding-top: 200px">
+    <div class="layui-colla-item" style="padding-top: 10px">
 
         <h2 class="layui-colla-title"><i class="layui-icon" style="color: #cc0000">&#xe67a;</i>Hot!</h2>
-        <div class="layui-colla-content ">
+        <div class="layui-colla-content layui-show">
 
             <div class="layui-container">
                 <div class="layui-row">
-                    <div style="margin-bottom: 5px" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4"
-                         th:each="hotBook : ${hotBooks}">
-                        <a th:href="'/book/' + ${hotBook.id} + '.html'">
-                            <div class="layui-col-xs5 layui-col-sm4 layui-col-md4 layui-col-lg4">
-                                <img style=" width:100px; height:100px;"
-                                     class="lazyload" th:attr="data-src=${hotBook.picUrl}"/>
-                            </div>
-                            <div class="layui-col-xs5 layui-col-sm6 layui-col-md6 layui-col-lg6">
-                                <ul>
-                                    <li class="line-limit-length" style="font-weight: bold"
-                                        th:text="${hotBook.bookName}"></li>
-                                    <li th:text="'Author：'+ ${hotBook.author}"></li>
-                                    <li style="width: 180px;height:40px;overflow: hidden"
-                                        th:text="'Intro：'+ ${hotBook.bookDesc}"></li>
-                                </ul>
-                            </div>
-                            <div style="font-style: italic;color: red"
-                                 class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2"
-                                 th:text="${hotBook.score} + 'score'"></div>
-                        </a>
-                    </div>
+<!--                    <div style="margin-bottom: 5px" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4"-->
+<!--                         th:each="hotBook : ${hotBooks}">-->
+<!--                        <a th:href="'/book/' + ${hotBook.id} + '.html'">-->
+<!--                            <div class="layui-col-xs5 layui-col-sm3 layui-col-md3 layui-col-lg3">-->
+<!--                                <img style=" width:100px; height:100px;"-->
+<!--                                     class="lazyload" th:attr="data-src=${hotBook.picUrl}"/>-->
+<!--                            </div>-->
+<!--                            <div class="layui-col-xs7 layui-col-sm6 layui-col-md7 layui-col-lg7">-->
+<!--                                <ul>-->
+<!--                                    <li class="line-limit-length" style="font-weight: bold"-->
+<!--                                        th:text="${hotBook.bookName}"></li>-->
+<!--                                    <li th:text="'Author：'+ ${hotBook.author}"></li>-->
+<!--                                    <li style="width: 180px;height:40px;overflow: hidden"-->
+<!--                                        th:text="'Intro：'+ ${hotBook.bookDesc}"></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div style="font-style: italic;color: red"-->
+<!--                                 class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2"-->
+<!--                                 th:text="${hotBook.score} + 'score'"></div>-->
+<!--                        </a>-->
+<!--                    </div>-->
 
-                    <div th:each="hotBook : ${hotBooks}" style="margin-top: 1%"
-                     class="layui-col-xs12 layui-col-sm6 layui-col-md6 layui-col-lg6">
+                    <div th:each="hotBook : ${hotBooks}" style="margin-top: 1%" class="layui-col-xs12 layui-col-sm6 layui-col-md6 layui-col-lg6">
                     <a th:href="'/book/'+${hotBook.id}+'.html'">
                         <div class="layui-col-xs5 layui-col-sm3 layui-col-md3 layui-col-lg3">
                             <img style=" width:100px; height:125px;"
@@ -258,10 +257,10 @@
                              style="float: left;padding-right: 10px">
                             <div><b th:text="${hotBook.bookName}"></b></div>
                             <div class="layui-col-xs8 layui-col-sm9 layui-col-md10 layui-col-lg10"
-                                 th:text="'作者：'+ ${hotBook.author}"></div>
+                                 th:text="'author：'+ ${hotBook.author}"></div>
                             <div class="layui-col-xs3 layui-col-sm2 layui-col-md1 layui-col-lg1" style="text-align: right;">
                             <b><i style="color: red"
-                                  th:text="${hotBook.score} + '分'"></i></b></div>
+                                  th:text="${hotBook.score} + 'score'"></i></b></div>
                            </div>
                             <div class="layui-elip layui-col-xs12 layui-col-sm9 layui-col-md10 layui-col-lg10 layui-col-sm9 layui-col-md10 layui-col-lg10"
                                  th:text="${hotBook.bookDesc}">
@@ -284,7 +283,7 @@
 
 
 <div style="height: 1px" class="layui-col-lg2"></div>
-<div class="layui-colla-item layui-col-lg8" style="border-width: 1px;border-style: solid;border-radius: 2px;border-top-width: 0px ; padding-top: 200px ;padding-bottom: 200px"><a href="javascript:moreNewBooks()">
+<div class="layui-colla-item layui-col-lg8" style="border-width: 1px;border-style: solid;border-radius: 2px;border-top-width: 0px ; padding-top: 10px ;padding-bottom: 200px"><a href="javascript:moreNewBooks()">
     <h2 class="layui-colla-title"><i class="layui-icon" style="color: #1E9FFF">&#xe669;</i>Update
         <div style="float: right; margin-right: 20px"><i style="font-size: 14px;"
                                                          class="layui-icon">More&#xe65b;</i>

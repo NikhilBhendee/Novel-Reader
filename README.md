@@ -1,7 +1,17 @@
 # NovelDao
 基于Springboot开发的英文小说网，作为学习Springboot的实战的项目
 
-## 成果展示：
+## 涉及技术：
+
+### SpringBoot+Mybatis+Thymeleaf+Ehcache+Layui
+
++ 后端框架： SpringBoot
++ 持久化层框架： Mybatis
++ 模版引擎： Thymeleaf
++ 缓存： Ehcache
++ 前端引擎： Layui
+
+## 项目展示：
 
 + 首页：
 ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/index.png)

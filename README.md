@@ -67,7 +67,7 @@
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/main1.png)
 
 + 书籍详情页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/index.png)
+  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/detail.png)
 
 + 书籍目录页：
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/content.png)

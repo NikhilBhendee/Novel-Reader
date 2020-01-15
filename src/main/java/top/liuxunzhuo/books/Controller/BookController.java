@@ -35,7 +35,7 @@ import java.util.*;
 /**
  * 小说Controller
  *
- * @author 刘训灼
+ * @author LiuXunzhuo
  */
 @Controller
 @RequestMapping("/book")

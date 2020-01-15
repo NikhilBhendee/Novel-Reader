@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--书籍详情页-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
@@ -180,7 +181,7 @@
         <h2 class="layui-colla-title">
             <span>Newest</span>
             <span style="margin-left: 30px">
-                Upadte： <i th:text="${#dates.format(book.updateTime, 'yy-MM-dd HH:mm:ss')}"></i>
+                Update： <i th:text="${#dates.format(book.updateTime, 'yy-MM-dd HH:mm:ss')}"></i>
             </span>
         </h2>
         <div class="layui-colla-content layui-show indexP layui-row">
@@ -345,8 +346,6 @@
         }else{
             window.location.href = "/user/login.html?bookId="+$("#bookIdHidden").val();
         }
-
-
 
     }
 

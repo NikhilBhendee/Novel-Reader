@@ -1,6 +1,6 @@
 # NovelDao
 
-基于Springboot开发的英文小说网，作为学习Springboot的实战的项目
+基于Springboot开发的英文阅读网，作为学习Springboot的实战的项目，目前项目不断update中
 
 ## 技术栈：
 
@@ -41,7 +41,7 @@
 1. 数据库安装：
 
    1. 安装MySQL软件。
-   2. 修改MySQL`max_allowed_packet `配置（建议100M）。
+   2. 修改MySQL max_allowed_packet 配置建议100M。
    3. 新建数据库
        ``` sql 
        books:create database books default character set utf8mb4 collate utf8mb4_general_ci 。

@@ -1,8 +1,6 @@
 package top.liuxunzhuo.books.core.utils;
 
-/**
- * @author XXY
- */
+
 public class Constants {
 
     /**

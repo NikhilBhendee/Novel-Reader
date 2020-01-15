@@ -22,10 +22,7 @@ import java.io.OutputStream;
 import java.net.URLDecoder;
 import java.util.*;
 
-/**
- * 书籍内容过滤器
- * @author 刘训灼
- */
+
 @Slf4j
 public class BookFilter implements Filter {
 

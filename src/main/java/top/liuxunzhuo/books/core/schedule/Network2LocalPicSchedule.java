@@ -15,7 +15,6 @@ import java.util.List;
 /**
  * 定时转换网络图片为本地图片
  *
- * @author 11797
  */
 @ConditionalOnProperty(prefix = "pic.save",name = "type",havingValue = "2")
 @Service

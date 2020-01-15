@@ -13,9 +13,7 @@ import top.liuxunzhuo.common.utils.MD5Util;
 
 import java.util.List;
 
-/**
- * @author XXY
- */
+
 @RequiredArgsConstructor
 @Service
 public class UserService {

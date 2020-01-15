@@ -9,8 +9,6 @@ public class VierResolverConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/main").setViewName("books/index_v1");
-
-        //registry.addViewController("/first").setViewName("books/book_search");
     }
 
 }

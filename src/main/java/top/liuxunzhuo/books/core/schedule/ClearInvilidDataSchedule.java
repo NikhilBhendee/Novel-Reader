@@ -10,10 +10,7 @@ import top.liuxunzhuo.books.service.BookService;
 
 import java.io.File;
 
-/**
- * 清理数据库中无效数据
- *
- * @author 11797*/
+
 @Service
 @RequiredArgsConstructor
 @Slf4j

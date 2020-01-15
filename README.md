@@ -46,7 +46,7 @@
        ``` sql 
        books:create database books default character set utf8mb4 collate utf8mb4_general_ci 。
    4. 执行public文件夹中的/sql/books.sql文件。建立数据表
-   (为了测试，后续我将提供一个开放的阿里云数据库，可通过访问ip:3360端口 books数据库，直接获取测试数据)
+   5. 为了测试，后续我将提供一个开放的阿里云数据库，可通过访问ip:3306端口 books数据库，直接获取测试数据
 2. application.yml 中：
 
    + 修改配置，使用自己的数据源

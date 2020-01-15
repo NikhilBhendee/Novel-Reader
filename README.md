@@ -42,7 +42,9 @@
 
    1. 安装MySQL软件。
    2. 修改MySQL`max_allowed_packet `配置（建议100M）。
-   3. 新建数据库books:create database books default character set utf8mb4 collate utf8mb4_general_ci 。
+   3. 新建数据库
+       ``` sql
+       books:create database books default character set utf8mb4 collate utf8mb4_general_ci 。
    4. 执行public文件夹中的/sql/books.sql文件。建立数据表
 
 2. application.yml 中：

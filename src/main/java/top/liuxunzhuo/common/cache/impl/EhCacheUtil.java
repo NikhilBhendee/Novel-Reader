@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.liuxunzhuo.common.cache.CommonCacheUtil;
 
-/**
- * @author 11797
- */
 @Service
 public class EhCacheUtil implements CommonCacheUtil {
 	

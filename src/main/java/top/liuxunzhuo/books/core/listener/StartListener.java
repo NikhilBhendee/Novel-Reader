@@ -12,9 +12,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * @author 11797
- */
+
 @WebListener
 @Slf4j
 @RequiredArgsConstructor

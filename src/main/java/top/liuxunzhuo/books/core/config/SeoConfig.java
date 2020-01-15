@@ -7,9 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 
-/**
- * @author 11797
- */
+
 @Data
 @Component
 @ConfigurationProperties(prefix="website")

@@ -18,9 +18,7 @@ import java.util.regex.Pattern;
 
 import static java.util.regex.Pattern.compile;
 
-/**
- * @author 11797
- */
+
 @Slf4j
 public class BiquCrawlSource extends BaseHtmlCrawlSource {
 

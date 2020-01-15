@@ -9,9 +9,7 @@ import org.springframework.context.annotation.Primary;
 import top.liuxunzhuo.books.core.crawl.BaseHtmlCrawlSource;
 import top.liuxunzhuo.books.core.crawl.BiquCrawlSource;
 
-/**
- * @author 11797
- */
+
 @Slf4j
 @Configuration
 public class CrawlDingdianConfig {

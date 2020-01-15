@@ -1,8 +1,6 @@
 package top.liuxunzhuo.books.core.utils;
 
-/**
- * @author 11797
- */
+
 public class CatUtil {
 
     public static int getCatNum(String catName) {

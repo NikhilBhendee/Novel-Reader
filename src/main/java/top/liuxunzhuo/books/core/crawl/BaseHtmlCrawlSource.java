@@ -2,10 +2,7 @@ package top.liuxunzhuo.books.core.crawl;
 
 import lombok.Data;
 
-/**
- * html爬虫源
- * @author 11797
- */
+
 @Data
 public abstract class BaseHtmlCrawlSource extends BaseCrawlSource{
 

@@ -6,10 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 首页推荐书籍配置
- * @author XXY
- * */
+
 @Component
 @ConfigurationProperties(prefix = "index")
 public class IndexRecBooksConfig {

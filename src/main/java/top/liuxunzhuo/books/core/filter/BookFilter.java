@@ -24,7 +24,7 @@ import java.util.*;
 
 /**
  * 书籍内容过滤器
- * @author xxy
+ * @author 刘训灼
  */
 @Slf4j
 public class BookFilter implements Filter {

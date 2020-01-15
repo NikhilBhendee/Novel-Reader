@@ -73,7 +73,7 @@
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/content.png)
 
 + 书籍阅读页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/detail.png)
+  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/read.png)
 
 + 登陆注册页：
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/login.png)

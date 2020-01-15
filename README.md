@@ -43,7 +43,7 @@
    1. 安装MySQL软件。
    2. 修改MySQL`max_allowed_packet `配置（建议100M）。
    3. 新建数据库
-       ``` sql
+       ``` sql 
        books:create database books default character set utf8mb4 collate utf8mb4_general_ci 。
    4. 执行public文件夹中的/sql/books.sql文件。建立数据表
 
@@ -76,7 +76,7 @@
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/detail.png)
 
 + 登陆注册页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/detail.png)
+  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/login.png)
 
 + 阅读历史页：
   ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/history.png)

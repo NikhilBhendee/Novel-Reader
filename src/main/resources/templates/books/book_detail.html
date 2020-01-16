@@ -8,10 +8,7 @@
     <title th:text="${title}"></title>
 
     <meta name="keywords" th:content="${keyword}">
-
-    <meta name="description"
-          th:content="${description}">
-
+    <meta name="description" th:content="${description}">
     <meta property="og:type" content="novel"/>
     <meta property="og:title" th:attr="content=${title}"/>
     <meta property="og:description" th:attr="content=${book.bookDesc}"/>
@@ -25,10 +22,6 @@
     <meta property="og:novel:update_time" th:attr="content=${#dates.format(book.updateTime, 'yy-MM-dd')}"/>
     <meta property="og:novel:latest_chapter_name" th:attr="content=${lastIndexName}"/>
     <meta property="og:novel:latest_chapter_url" th:attr="content=${application.webSiteDomain}+'/book/'+${bookId}+'/'+${lastIndexNum}+'.html'"/>
-
-
-
-
     <div th:include="common/css :: css"></div>
 
     <style type="text/css">
@@ -169,7 +162,6 @@
 <div style="text-align: center;height: 45px;line-height: 45px">
     <a th:href="'/book/'+${book.id}+'/'+${minIndexNum}+'.html'"  type="button" class="layui-btn layui-btn-sm layui-btn-radius">Start Reading</a>
     <button type="button" id="collectButton"  class="layui-btn layui-btn-sm layui-btn-radius layui-btn-warm">Add to BookShelf</button>
-
     <button type="button" onclick="toMyCollect()" class="layui-btn layui-btn-sm layui-btn-radius layui-bg-cyan">My category</button>
     <button type="button" onclick="downloadFile()" class="layui-btn layui-btn-sm layui-btn-radius layui-bg-normal">Download</button>
 </div>
@@ -198,9 +190,9 @@
     <a th:href="'/book/'+${book.id}+'/index.html'">Check Content</a>
 </div>
 
-<!--
+
 <div style="position: fixed;top:0px;left:0px;z-index:-100;opacity: 0" th:utext="${attacDivForSearch}"></div>
--->
+
 </div>
 
 <div th:replace="common/footer :: footer">

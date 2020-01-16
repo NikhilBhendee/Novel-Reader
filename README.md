@@ -1,4 +1,4 @@
-# NovelDao
+# 项目梗概
 
 基于Springboot开发的英文阅读网，作为学习Springboot的实战的项目，目前项目不断update中
 
@@ -60,29 +60,29 @@
 ## 成果展示：
 
 + 首页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/index.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/index.png)
 
 + 主页面：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/main.png)
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/main1.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/main.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/main1.png)
 
 + 书籍详情页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/detail.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/detail.png)
 
 + 书籍目录页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/content.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/content.png)
 
 + 书籍阅读页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/read.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/read.png)
 
 + 登陆注册页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/login.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/login.png)
 
 + 阅读历史页：
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/history.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/history.png)
 
 + 个人书架页:
-  ![image](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/shelf.png)
+  ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/shelf.png)
 
 ### 后期规划：
 

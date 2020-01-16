@@ -152,12 +152,8 @@
 
 <body id="read">
 <div id="content">
-
-
 <input type="hidden" id="bookIdHidden" th:value="${bookContent.bookId}"/>
-
 <input type="hidden" id="contentIdHidden" th:value="${bookContent.id}"/>
-
 <input type="hidden" id="indexNumHidden" th:value="${bookContent.indexNum}"/>
 
 <script>
@@ -203,21 +199,20 @@
         <span
                  th:utext="${bookContent.content}"></span></p>
 </div>
+
 <div class="indexDiv" style="height: 42px;line-height: 42px;text-align:center;background: #f2f2f2">
 
     <a th:href="'/book/'+${bookContent.bookId}+'/'+${preIndexNum}+'.html'">Last</a>
     <a th:href="'/book/'+${bookContent.bookId}+'/index.html'">Content</a>
     <a th:href="'/book/'+${bookContent.bookId}+'/'+${nextIndexNum}+'.html'">Next</a>
 </div>
-
-
 </div>
 
 
 <div th:replace="common/footer :: footer">
 </div>
 
-<!--<a name="buttom"></a>-->
+
 </body>
 
 <script>

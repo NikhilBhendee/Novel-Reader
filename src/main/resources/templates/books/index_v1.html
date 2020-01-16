@@ -6,19 +6,12 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <title th:text="${application.seoConfig.page['index.title']}"></title>
-
     <meta name="keywords" th:content="${application.seoConfig.page['index.keyword']}">
-
-    <meta name="description"
-          th:content="${application.seoConfig.page['index.description']}">
-
+    <meta name="description" th:content="${application.seoConfig.page['index.description']}">
     <meta property="og:type" content="novel_index"/>
     <meta property="og:title" th:content="${application.seoConfig.page['index.title']}"/>
-    <meta proper ty="og:description"
-          th:content="${application.seoConfig.page['index.description']}"/>
-
+    <meta proper ty="og:description" th:content="${application.seoConfig.page['index.description']}"/>
     <div th:include="common/css :: css"></div>
 
     <style>
@@ -185,7 +178,7 @@
                     <br>
                     Website is under testing <br><br>
                     Sorry about Everything~<br><br><br>
-                    Development: Version 1.2.13
+                    Development: Version 1.2.15
                 </div>
             </div>
             </div>
@@ -226,27 +219,6 @@
 
             <div class="layui-container">
                 <div class="layui-row">
-<!--                    <div style="margin-bottom: 5px" class="layui-col-xs12 layui-col-sm6 layui-col-md4 layui-col-lg4"-->
-<!--                         th:each="hotBook : ${hotBooks}">-->
-<!--                        <a th:href="'/book/' + ${hotBook.id} + '.html'">-->
-<!--                            <div class="layui-col-xs5 layui-col-sm3 layui-col-md3 layui-col-lg3">-->
-<!--                                <img style=" width:100px; height:100px;"-->
-<!--                                     class="lazyload" th:attr="data-src=${hotBook.picUrl}"/>-->
-<!--                            </div>-->
-<!--                            <div class="layui-col-xs7 layui-col-sm6 layui-col-md7 layui-col-lg7">-->
-<!--                                <ul>-->
-<!--                                    <li class="line-limit-length" style="font-weight: bold"-->
-<!--                                        th:text="${hotBook.bookName}"></li>-->
-<!--                                    <li th:text="'Author：'+ ${hotBook.author}"></li>-->
-<!--                                    <li style="width: 180px;height:40px;overflow: hidden"-->
-<!--                                        th:text="'Intro：'+ ${hotBook.bookDesc}"></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                            <div style="font-style: italic;color: red"-->
-<!--                                 class="layui-col-xs2 layui-col-sm2 layui-col-md2 layui-col-lg2"-->
-<!--                                 th:text="${hotBook.score} + 'score'"></div>-->
-<!--                        </a>-->
-<!--                    </div>-->
 
                     <div th:each="hotBook : ${hotBooks}" style="margin-top: 1%" class="layui-col-xs12 layui-col-sm6 layui-col-md6 layui-col-lg6">
                     <a th:href="'/book/'+${hotBook.id}+'.html'">

@@ -3,22 +3,14 @@
 <!--主页-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <title th:text="${application.seoConfig.page['index.title']}"></title>
-
     <meta name="keywords" th:content="${application.seoConfig.page['index.keyword']}">
-
-    <meta name="description"
-          th:content="${application.seoConfig.page['index.description']}">
-
+    <meta name="description" th:content="${application.seoConfig.page['index.description']}">
     <meta property="og:type" content="novel_index"/>
     <meta property="og:title" th:content="${application.seoConfig.page['index.title']}"/>
-    <meta proper ty="og:description"
-          th:content="${application.seoConfig.page['index.description']}"/>
-
+    <meta proper ty="og:description" th:content="${application.seoConfig.page['index.description']}"/>
     <div th:include="common/css :: css"></div>
 
     <style>

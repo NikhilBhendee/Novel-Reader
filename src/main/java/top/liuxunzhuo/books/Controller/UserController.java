@@ -8,9 +8,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import top.liuxunzhuo.books.Entity.User;
-import top.liuxunzhuo.common.cache.CommonCacheUtil;
+import top.liuxunzhuo.books.common.cache.CommonCacheUtil;
 import top.liuxunzhuo.books.service.UserService;
-import top.liuxunzhuo.common.utils.UUIDUtils;
+import top.liuxunzhuo.books.common.utils.UUIDUtils;
 
 import java.util.*;
 

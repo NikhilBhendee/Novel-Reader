@@ -8,11 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import top.liuxunzhuo.books.core.config.IndexRecBooksConfig;
-import top.liuxunzhuo.books.core.constant.CacheKeyConstans;
+import top.liuxunzhuo.books.common.config.IndexRecBooksConfig;
+import top.liuxunzhuo.books.common.constant.CacheKeyConstans;
 import top.liuxunzhuo.books.Entity.Book;
 import top.liuxunzhuo.books.service.BookService;
-import top.liuxunzhuo.common.cache.CommonCacheUtil;
+import top.liuxunzhuo.books.common.cache.CommonCacheUtil;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;

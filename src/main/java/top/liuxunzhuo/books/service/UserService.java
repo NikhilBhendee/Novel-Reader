@@ -9,7 +9,7 @@ import top.liuxunzhuo.books.Entity.User;
 import top.liuxunzhuo.books.Entity.UserExample;
 import top.liuxunzhuo.books.Entity.UserRefBook;
 import top.liuxunzhuo.books.Entity.UserRefBookExample;
-import top.liuxunzhuo.common.utils.MD5Util;
+import top.liuxunzhuo.books.common.utils.MD5Util;
 
 import java.util.List;
 

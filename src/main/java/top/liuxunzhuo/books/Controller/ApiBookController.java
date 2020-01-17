@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import top.liuxunzhuo.books.core.utils.CatUtil;
+import top.liuxunzhuo.books.common.utils.CatUtil;
 import top.liuxunzhuo.books.Entity.BookContent;
 import top.liuxunzhuo.books.Entity.Book;
 import top.liuxunzhuo.books.Entity.BookIndex;
 import top.liuxunzhuo.books.service.BookService;
-import top.liuxunzhuo.books.vo.BookVO;
-import top.liuxunzhuo.common.cache.CommonCacheUtil;
-import top.liuxunzhuo.books.core.utils.Constants;
+import top.liuxunzhuo.books.Entity.BookVO;
+import top.liuxunzhuo.books.common.cache.CommonCacheUtil;
+import top.liuxunzhuo.books.common.utils.Constants;
 
 import java.util.*;
 

@@ -41,8 +41,7 @@ public class ApiBookController {
     @RequestMapping("hotBook")
     public List<Book> hotBooks () {
         //查询热点数据
-        List<Book> hotBooks = bookService.search(1, 6, null, null, null, null, null, null, null, "visit_count DESC,score ", "DESC");
-        return hotBooks;
+        return bookService.search(1, 6, null, null, null, null, null, null, null, "visit_count DESC,score ", "DESC");
     }
 
     /**

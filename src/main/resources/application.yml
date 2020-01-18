@@ -7,9 +7,7 @@ spring:
       username: root
       password: lxz991203
       driver-class-name: com.mysql.cj.jdbc.Driver
-  #      url: jdbc:mysql://127.0.0.1:3306/books?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-#      username: root
-#      password: test123456
+
   cache:
     ehcache:
       config: classpath:ehcache.xml
@@ -34,17 +32,18 @@ spring:
       cache: true
 
 
-#  mvc:
-#    static-path-pattern: /static/** #设定静态文件路径，js,css等
+
 mybatis:
   mapper-locations: classpath:mybatis/mapping/*.xml
-  type-aliases-package: xyz.zinglizingli.books.po
+  type-aliases-package: top.liuxunzhuo.books.Entity
 
 
 #首页本站推荐小说配置
 index:
   template: v2
   recBooks:
+    - {bookName: The Mortal Cultivation of Immortals,bookAuthor: WangYu}
+    - {bookName: The Mortal Cultivation of Immortals,bookAuthor: WangYu}
     - {bookName: The Mortal Cultivation of Immortals,bookAuthor: WangYu}
 
 

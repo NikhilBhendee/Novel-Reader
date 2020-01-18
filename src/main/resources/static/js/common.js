@@ -25,9 +25,11 @@ if (token) {
 function readHistory() {
 
     var books = localStorage.getItem("historyBooks");
-    var bookIds = "-1929";
+    var bookIds = "1";
     if (books) {
+
         bookIds = JSON.parse(localStorage.getItem("historyBooks")).join(",");
+
     }
     window.location.href = "/book/search?historyBookIds=" + bookIds;
 };

@@ -26,6 +26,7 @@ public class BookApplication {
     /**
      * 解决同一时间只能一个定时任务执行的问题
      * */
+
     @Bean
     public TaskScheduler taskScheduler() {
         ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();

@@ -29,9 +29,6 @@ import java.util.Map;
 @Slf4j
 public class IndexController {
 
-    @Value("${index.template}")
-    private String indexTemplate;
-
 
     private final BookService bookService;
 

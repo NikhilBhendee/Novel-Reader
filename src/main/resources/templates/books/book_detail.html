@@ -22,8 +22,8 @@
     <meta property="og:novel:update_time" th:attr="content=${#dates.format(book.updateTime, 'yy-MM-dd')}"/>
     <meta property="og:novel:latest_chapter_name" th:attr="content=${lastIndexName}"/>
     <meta property="og:novel:latest_chapter_url" th:attr="content=${application.webSiteDomain}+'/book/'+${bookId}+'/'+${lastIndexNum}+'.html'"/>
-    <div th:include="common/css :: css"></div>
 
+    <div th:include="common/css :: css"></div>
     <style type="text/css">
 
         .indexP p a{

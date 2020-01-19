@@ -3,6 +3,7 @@
 <!--主页-->
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title th:text="${application.seoConfig.page['index.title']}"></title>
@@ -14,29 +15,25 @@
     <div th:include="common/css :: css"></div>
 
     <style>
-
-
-
         body ul.layui-nav li.layui-nav-item a {
             display: block;
             transition: all .3s;
             -webkit-transition: all .3s;
         }
-        @font-face {font-family: 'webfont-desc';
+        @font-face {
+            font-family: 'webfont-desc';
             src: url('//at.alicdn.com/t/webfont_eovt4pxxy5.eot'); /* IE9*/
             src: url('//at.alicdn.com/t/webfont_eovt4pxxy5.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
             url('//at.alicdn.com/t/webfont_eovt4pxxy5.woff') format('woff'), /* chrome、firefox */
             url('//at.alicdn.com/t/webfont_eovt4pxxy5.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
             url('//at.alicdn.com/t/webfont_eovt4pxxy5.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
         }
-
         .web-font-desc{
             font-family:"webfont-desc" !important;
             font-size:16px;font-style:normal;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         .site-desc{position: relative; height: 70px; margin-top: 80px;}
         .site-desc .web-font-desc{color: #fff; color: rgba(255,255,255,.8); font-size: 80px;}
         .site-desc-anim{-webkit-animation-name: site-desc; animation-name: site-desc;}
@@ -53,14 +50,36 @@
         .site-download a:hover{border-color: rgba(255,255,255,.3); color: #fff; background-color: rgba(255,255,255,.05); border-radius: 30px;}
         .site-download a cite{position: absolute; left: 55px; top: 2px; font-size: 30px;}
 
+
         @keyframes site-zfj {
-            0% {opacity: 1;  transform: translate3d(0, 0, 0) rotate(0deg) scale(1);}
-            10% {opacity: 0.8; transform: translate3d(-100px, 0px, 0) rotate(10deg) scale(0.7);}
-            35% {opacity: 0.6; transform: translate3d(100px, 0px, 0) rotate(30deg) scale(0.4);}
-            50% {opacity: 0.4; transform: translate3d(0, 0, 0) rotate(360deg) scale(0);}
-            80% {opacity: 0.2; transform: translate3d(0, 0, 0) rotate(720deg) scale(1);}
-            90% {opacity: 0.1; transform: translate3d(0, 0, 0) rotate(3600deg) scale(6);}
-            100% {opacity: 1; transform: translate3d(0, 0, 0) rotate(3600deg) scale(1);}
+            0% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+            }
+            10% {
+                opacity: 0.8;
+                transform: translate3d(-100px, 0px, 0) rotate(10deg) scale(0.7);
+            }
+            35% {
+                opacity: 0.6;
+                transform: translate3d(100px, 0px, 0) rotate(30deg) scale(0.4);
+            }
+            50% {
+                opacity: 0.4;
+                transform: translate3d(0, 0, 0) rotate(360deg) scale(0);
+            }
+            80% {
+                opacity: 0.2;
+                transform: translate3d(0, 0, 0) rotate(720deg) scale(1);
+            }
+            90% {
+                opacity: 0.1;
+                transform: translate3d(0, 0, 0) rotate(3600deg) scale(6);
+            }
+            100% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) rotate(3600deg) scale(1);
+            }
         }
 
         @keyframes site-desc {
@@ -70,11 +89,9 @@
 
 
     </style>
-
-
 </head>
 
-
+<body>
 <!-- 你的HTML代码 -->
 <a name="top"></a>
 <div class="site-banner">

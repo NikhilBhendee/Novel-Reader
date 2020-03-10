@@ -84,27 +84,6 @@
 + 个人书架页:
   ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/shelf.png)
 
-### 后期规划：
-
-1. 完成对应的一个后台管理的springboot项目，可以持续跟进
-2. 对接口实现全RestFul化
-3. 可能会对页面进一步美化
-4. 持续维护升级
-5. 围绕Springboot：
-   + 发布更多的开源实战项目，初步规划
-     1. 基于springboot+vue实现的前后端分离的宠物论坛开发
-     2. 基于springboot+vue+nginx+redis+rabbitmq+ES 实现的Java技术论坛开发
-     3. ....
-   + 结合各种中间件发布对应的实战项目：
-     1. 消息队列 RabbitMQ
-     2. 负载均衡 Nginx
-     3. 缓存 Redis
-     4. RPC通讯框架: Zoomkeeper Duboo
-     5. 微服务
-     6. 全文搜索引擎：ElasticSearch
-6. 围绕Python爬虫：
-   + 发布自己写的爬虫框架
-   + 网络爬虫实战
 
 ### 展示网站:
 

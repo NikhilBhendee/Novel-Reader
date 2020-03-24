@@ -89,11 +89,3 @@
 
 ##  www.noveldao.com
 
-### License Apache2.0
-
-
-## 欢迎大家交流～ 可以加我微信交流
-
-+ 本人菜鸟一名，不断和大家一起学习进步中！加油
-
-![wechat](https://github.com/Xunzhuo/NovelDao/raw/master/src/main/resources/public/wechat.jpg)

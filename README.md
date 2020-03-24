@@ -4,7 +4,7 @@
 
 ## 技术栈：
 
-### SpringBoot+Mybatis+Thymeleaf+Ehcache+Layui
+### `SpringBoot+Mybatis+Thymeleaf+Ehcache+Layui`
 
 ### 后端技术栈：
 

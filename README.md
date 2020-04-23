@@ -1,6 +1,6 @@
 # 项目梗概
 
-基于Springboot开发的英文阅读网，作为学习Springboot的实战的项目，目前项目不断update中
+基于Springboot开发的英文阅读网，作为学习Springboot的实战的项目
 
 ## 技术栈：
 

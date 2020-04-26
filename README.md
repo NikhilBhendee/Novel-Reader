@@ -1,6 +1,6 @@
 # 项目梗概
 
-基于Springboot开发的英文阅读网，作为学习Springboot的实战的项目
+基于Springboot二次开发的英文阅读网，作为学习Springboot的实战的项目
 
 ## 技术栈：
 
@@ -84,8 +84,4 @@
 + 个人书架页:
   ![image](https://github.com/Xunzhuo/SpringBoot-in-Action/raw/master/src/main/resources/public/shelf.png)
 
-
-### 展示网站:
-
-##  www.noveldao.com
 
